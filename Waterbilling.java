@@ -15,7 +15,7 @@ class Waterbilling
 	public static void confirm_month()
 	{
 		Scanner in=new Scanner(System.in);
-		System.out.println("Enter the location to be printed : ");
+		System.out.println("Enter the month to be printed : ");
 		month=in.nextLine();
 	}
 	public void dm(int cons){}
