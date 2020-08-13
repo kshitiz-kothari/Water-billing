@@ -1,15 +1,18 @@
 import java.io.*;
 import java.util.*;
 import java.io.File;
-class Consumer()
+class Consumer
 {
+		private int cons_id;
+		private String cons_name;
+		private String cons_add;
 		Consumer(int id)
 		{
 			cons_id=id;
 		}
-		public get_cons_info()
+		public void get_cons_info()
 		{
-		
+			
 		}
 		public void  display_cons() 
 		{
@@ -46,8 +49,6 @@ class Waterbilling
 		System.out.println("Enter the source file name : ");
 		String file_name = in.nextLine();
 		File input_file = new File (file_name);
-		confirm_print_loc();
-		confirm_month();
 		int rates[];
 		int meter_rent=40;
 		int[] fixed_charges={50,100,200};
@@ -60,13 +61,14 @@ class Waterbilling
 		switch(choice)
 		{
 			case 1:
-				
+				confirm_print_loc();
+				confirm_month();
 				break;
 			case 2:
 				System.out.println("Enter the consumer id : ");
-				id=in.nextInt();
-				Consumer obj=new Consumer(id);
-				obj.display_cons();
+				int id=in.nextInt();
+				/*Consumer obj=new Consumer(id);
+				obj.display_cons();*/
 				break;
 		}
 		if (input_file.exists())
