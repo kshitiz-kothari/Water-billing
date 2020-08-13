@@ -1,7 +1,25 @@
 import java.io.*;
 import java.util.*;
 import java.io.File;
-
+class Consumer()
+{
+		Consumer(int id)
+		{
+			cons_id=id;
+		}
+		public get_cons_info()
+		{
+		
+		}
+		public void  display_cons() 
+		{
+		get_cons_info();
+      		System.out.println("User id : " + this.cons_id);
+      		System.out.println("Name : " + this.cons_name);
+      		System.out.println("Address : " + this.cons_add);
+  		}
+		
+}
 class Waterbilling
 {
 	static String location;
@@ -18,6 +36,7 @@ class Waterbilling
 		System.out.println("Enter the month to be printed : ");
 		month=in.nextLine();
 	}
+
 	public void dm(int cons){}
 	public void nd(int cons){}
 	public void in(int cons){}
@@ -35,6 +54,21 @@ class Waterbilling
 		int[] min={100,200,300};
 		String[] conn_type={"DM","ND","IN"};
 		System.out.println(location);
+		System.out.println("To process the bill enter 1");
+		System.out.println("To display consumer information enter 2");
+		int choice= in.nextInt();
+		switch(choice)
+		{
+			case 1:
+				
+				break;
+			case 2:
+				System.out.println("Enter the consumer id : ");
+				id=in.nextInt();
+				Consumer obj=new Consumer(id);
+				obj.display_cons();
+				break;
+		}
 		if (input_file.exists())
 		 {
 			System.out.println(input_file.getName() + " exists");
